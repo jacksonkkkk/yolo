@@ -16,17 +16,17 @@
 * "update-alternatives --install /usr/bin/python python /usr/bin/python3 1"
 * "pip3 install --upgrade pip"
 * "pip3 install Flask, Pillow, numpy, opencv-python"
-* "cd ~/jacksonkkkk/static/"
+* "cd ~/yolov4/static/"
 * "vim index.js"
 
 6. Edit the url, replace the localhost to your external ip from GCE
 7. Download the weight files from https://drive.google.com/uc?export=download&id=1-3jWwLJoYnjQ3Nte9ikJmgv0iwJOCaIU
 8. Upload the weight files using SSH "built-in upload features" and choose the weight from your local computer
 9. On SSH run:
-* "mv ~/yolov4-custom_best.weights ~/jacksonkkkk"
+* "mv ~/yolov4-custom_best.weights ~/yolov4"
 10. EXIT SSH
 11. On Cloud Shell TERMINAL run:
-* "gcloud compute ssh --zone={VM INSTANCE ZONE} {VM INSTANCE NAME} --command="cd ~/jacksonkkkk && nohup python app.py &" --> using 'nohup' command and '&' from bash for running on the background so you can running without the server being interupted.
+* "gcloud compute ssh --zone={VM INSTANCE ZONE} {VM INSTANCE NAME} --command="cd ~/yolov4 && nohup python app.py &" --> using 'nohup' command and '&' from bash for running on the background so you can running without the server being interupted.
 
 12. Go through your http://{EXTERNAL-IP}:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
 13. Choose files and sent the response.
